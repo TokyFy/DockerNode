@@ -1,5 +1,9 @@
-FROM node:4.2
-COPY . /src
-RUN cd /src && npm install
+FROM node:lts-alpine
+#COPY . /src
+VOLUME /data
+#RUN cd /data && npm install
+
 EXPOSE 4000
-CMD ["node", "/src/server.js"]
+WORKDIR /data
+
+CMD ["yarn", "start"]

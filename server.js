@@ -1,10 +1,10 @@
-var http = require('http')
+import http from "http";
 
-var port = 4000
+const port = 4000
 
-var server = http.createServer(function (request, response) {
+const server = http.createServer(function (request, response) {
   response.writeHead(200, {'Content-Type': 'text/plain'})
-  response.end('Hello World\n')
+  response.end('Hello World !!\n')
 })
 
 server.listen(port)
